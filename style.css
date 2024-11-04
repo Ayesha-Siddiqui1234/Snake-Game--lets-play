@@ -1,0 +1,131 @@
+/* Set a background image for the entire page */
+body {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    font-family: Arial, sans-serif;
+    background-image: url('./backsnake.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main game container styling */
+#gameContainer {
+    display: grid;
+     grid-template-columns: 1fr 1fr;/* we are using this for dividing into 2 seperate coloumns 1 for canvas and the other 1 for the controls part */
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    background-color: rgba(195, 232, 234, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+/* Controls layout */
+#controls {
+    display: flex;  /* align item on the default row or coloumn mange it defaultly*/
+    flex-direction: column;  /* it shows that eleement would be vertically */
+    align-items: center; /* Center align items */
+    gap: 10px; 
+}
+
+#directional-controls {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center align items */
+}
+
+#horizontal-controls { /* we didnt use flex direction coloum bcz we dont want this vertically*/
+    display: flex; /* Align left and right buttons in a row */
+    gap: 10px; /* Space between left and right buttons */
+}
+
+#action-buttons {  /* we didnt use flex direction coloum bcz we dont want this vertically*/
+    display: flex; /* Align restart and exit buttons in a row */
+    gap: 10px; 
+}
+
+
+/* Styling for game buttons */
+.control-btn {
+    min-width: 100px; /* Set a minimum width */
+    height: 50px; /* Increase height for better visibility */
+    padding: 10px; /* Add padding for space around text */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; /* Center the text */
+}
+
+.control-btn:hover {
+    background-color: #2c792c;
+}
+
+
+/* Canvas styling */
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: rgba(122, 234, 157, 0.8);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Responsive styling */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+  
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    
+    #gameContainer {
+        padding: 10px;
+    }
+
+    #controls {
+        gap: 5px;
+    }
+}
+
+/* Medium screens (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .control-btn {
+        width: 60px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    #controls {
+        gap: 8px;
+    }
+
+    #gameContainer {
+        padding: 15px;
+    }
+}
+
+/* Large screens (901px and above) */
+@media (min-width: 901px) {
+    .control-btn {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #controls {
+        gap: 10px;
+    }
+
+    #gameContainer {
+        padding: 20px;
+    }
+}

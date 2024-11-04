@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div id="controls">
+            <h1
+                style="color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">
+                SNAKE GAME</h1>
+            <div id="directional-controls">  <!-- we are using two divs first one for up and second oe for left and right key so it would help us in alignment and styling the buttons and make the code more managable if we want to add more functionalities in it -->
+                <button class="control-btn" id="up">↑</button>
+                <div id="horizontal-controls">
+                    <button class="control-btn" id="left">←</button>
+                    <button class="control-btn" id="right">→</button>
+                </div>
+                <button class="control-btn" id="down">↓</button>
+            </div>
+            <div id="action-buttons">
+                <button class="control-btn" id="restartButton">Restart</button>
+                <button class="control-btn" id="exitButton">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
